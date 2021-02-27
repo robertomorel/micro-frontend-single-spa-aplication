@@ -124,7 +124,7 @@ To initiate the lerna tool in your microfrontend environment, just put all mfe a
 
 In order to correctly run this project you must follow the steps:
 
-- Clone the projetct: `git clone https://github.com/robertomorel/micro-frontend-single-spa-aplication.git`
+- Clone the projetct: `[path]>/git clone https://github.com/robertomorel/micro-frontend-single-spa-aplication.git`
 - Install all dependencies: `[path/micro-frontend-single-spa-aplication]>/yarn install`
 - Finally run: `[path/micro-frontend-single-spa-aplication]>/yarn start`
 
