@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "@rm/root-config": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-root-config.js",
+    "@rm/react-single": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-react-single.js",
+    "@rm/react-multiples": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-react-multiples.js",
+    "@rm/react-lazy": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-react-lazy.js",
+    "@rm/react-parcel": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-react-parcel.js",
+    "@rm/react-route": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-react-route.js",
+    "@rm/utils": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-utils.js",
+    "@rm/react-header": "https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/mc-react-header.js"
+  }
+}

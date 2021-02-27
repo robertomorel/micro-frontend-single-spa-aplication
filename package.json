@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff",
+    "start": "lerna run start --parallel",
+    "test": "lerna run test --since",
+    "install": "lerna bootstrap",
+    "publish": "lerna publish"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "name": "yarn-workspaces-example"
+}

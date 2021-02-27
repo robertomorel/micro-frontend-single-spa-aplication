@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Implementing MFE with React and Single SPA</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta name="importmap-type" content="systemjs-importmap" />
+
+  <!--
+    Global import maps
+    - All projects that uses single-spa must use these libraries: 
+      "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+      "https://unpkg.com/react@17/umd/react.production.min.js"
+      "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+    - 4 dependencies: single-spa, react, react-dom, react-router-dom
+    - React libraries: https://reactjs.org/docs/cdn-links.html  
+  -->
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://unpkg.com/react@17/umd/react.production.min.js",
+        "react-dom": "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+        "react-router-dom": "https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js"
+      }
+    }
+  </script>
+
+  <!--
+    Load hera the Single-SPA
+  -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+
+  <!--
+    Local import maps
+    If is local: nickname will be "@rm/root-config", which will point to localhost:9000/rm-root-config.js to download the file
+                 nickname will be "@rm/react-single", which will point to localhost:8500/rm-react-single.js to download the file
+                 nickname will be "@rm/react-multiples", which will point to localhost:8500/rm-react-multiples.js to download the file
+                 nickname will be "@rm/react-parcel", which will point to localhost:8501/rm-react-parcel.js to download the file
+                 nickname will be "@rm/react-route", which will point to localhost:8500/rm-react-route.js to download the file
+                 nickname will be "@rm/utils", which will point to localhost:8600/rm-utils.js to download the file
+                 nickname will be "@rm/react-lazy", which will point to localhost:8500/rm-react-lazy.js to download the file
+                 nickname will be "@rm/react-header", which will point to localhost:8500/rm-react-header.js to download the file
+  -->
+
+  <!--
+  <% if (isLocal) { %>
+    <script type="systemjs-importmap" src="https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/importmap.development.json"></script>
+  <% } else { %>
+      <script type="systemjs-importmap" src="https://video-implementando-micro-front-end-react-single-spa.nyc3.digitaloceanspaces.com/importmap.production.json"></script>
+  <% } %>
+  -->
+
+  <% if (isLocal) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@rm/root-config": "//localhost:9000/rm-root-config.js",
+        "@rm/react-single": "//localhost:8400/rm-react-single.js",
+        "@rm/react-multiples": "//localhost:8500/rm-react-multiples.js",
+        "@rm/react-parcel": "//localhost:8501/rm-react-parcel.js",
+        "@rm/react-route": "//localhost:8900/rm-react-route.js",
+        "@rm/utils": "//localhost:8600/rm-utils.js",
+        "@rm/react-lazy": "//localhost:8300/rm-react-lazy.js",
+        "@rm/react-header": "//localhost:8700/rm-react-header.js"
+      }
+    }
+  </script>
+  <% } %>
+
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <% if (isLocal) { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+  <% } else { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <% } %>
+</head>
+<body>
+  <main></main>
+  <script>
+    System.import('@rm/root-config');
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+</html>
