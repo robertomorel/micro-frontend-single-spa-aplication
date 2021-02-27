@@ -130,14 +130,6 @@ In order to correctly run this project you must follow the steps:
 
 At this point you should be good to go 🚀
 
-## About me
-
-Well guys, lets talk 🤗
-
-[Github](https://github.com/robertomorel)
-
-[LinkedIn](https://www.linkedin.com/in/roberto-morel-6b9065193/)
-
 <hr>
 
 ## Guide videos (_besides the official docs, ofcourse_)😉
@@ -145,3 +137,10 @@ Well guys, lets talk 🤗
 - [Implementando micro front-end com Single SPA e React](https://www.youtube.com/watch?v=68LaXOWwxZI)
 - [How to Use Lerna](https://www.youtube.com/watch?v=p6qoJ4apCjA) 
 
+## About me
+
+Well guys, lets talk 🤗
+
+[Github](https://github.com/robertomorel)
+
+[LinkedIn](https://www.linkedin.com/in/roberto-morel-6b9065193/)
