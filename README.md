@@ -25,7 +25,7 @@ Single-spa is basically responsible to orchestrate all MFE, by sharing dependenc
 
 ## Getting started
 
-#### 1. Criating the root orchestrer
+#### 1. Creating the root orchestrer
 - Run `npx create-single-spa`
 - Inform:
   > * Proj. Directory: single-spa
@@ -36,7 +36,7 @@ Single-spa is basically responsible to orchestrate all MFE, by sharing dependenc
   > * Org. Name: om
 - Run `yarn start` to initiate  
 
-#### 2. Criating a first mfe application
+#### 2. Creating a first mfe application
 - Run `npx create-single-spa`
 - Inform:
   > * Proj. Directory: react-single
