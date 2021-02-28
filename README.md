@@ -28,24 +28,24 @@ Single-spa is basically responsible to orchestrate all MFE, by sharing dependenc
 #### 1. Creating the root orchestrer
 - Run `npx create-single-spa`
 - Inform:
-  > * Proj. Directory: single-spa
+  > * Proj. Directory: `single-spa`
   > * Choose "single-spa root config"
   > * yarn/npm?
   > * typescript? 
-  > * single-spa layout engine? N
-  > * Org. Name: om
+  > * single-spa layout engine? `N`
+  > * Org. Name: `rm`
 - Run `yarn start` to initiate  
 
 #### 2. Creating a first mfe application
 - Run `npx create-single-spa`
 - Inform:
-  > * Proj. Directory: react-single
+  > * Proj. Directory: `react-single`
   > * Choose "single-spa application / parcel"
   > * Framework? react/vue/angular...
   > * yarn/npm?
   > * typescript? 
-  > * Org. Name: om
-  > * Proj. Name: react-single
+  > * Org. Name: `rm`
+  > * Proj. Name: `react-single`
 - Run `yarn start -- --port 8500` to initiate 
 
 #### 3. On __single-spa\src\index.ejs__ change:
